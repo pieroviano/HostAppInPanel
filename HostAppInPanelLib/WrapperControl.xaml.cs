@@ -1,47 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Forms.Integration;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using HostAppInPanelLib.Utility;
 using HostAppInPanelLib.Utility.Win32;
+using WpfAdornedControl;
 using WpfAdornedControl.WpfControls.Extensions;
 using Panel = System.Windows.Forms.Panel;
 
 namespace HostAppInPanelLib
 {
     /// <summary>
-    /// Interaction logic for WrapperControl.xaml
+    ///     Interaction logic for WrapperControl.xaml
     /// </summary>
     public partial class WrapperControl : UserControl
     {
+        private readonly TimedAction _timedAction;
+        private int _delay;
+
         public WrapperControl()
         {
             InitializeComponent();
             // Create the interop host control.
             FormsHost = new WindowsFormsHost();
-            ContainerPanel = new System.Windows.Forms.Panel();
+            ContainerPanel = new Panel();
 
 
             _timedAction = new TimedAction();
         }
 
-        private readonly TimedAction _timedAction;
-        private int _delay;
+        public AdornedControl LoadingAdornerControl => LoadingAdorner;
 
         public Panel ContainerPanel { get; set; }
         public int WidthHeightIncrease { get; set; }
@@ -63,97 +55,6 @@ namespace HostAppInPanelLib
 
         public string Arguments { get; set; } = "";
         public string ProcessPath { get; set; } = "notepad.exe";
-
-        public void ProcessExited()
-        {
-            try
-            {
-                Dispatcher.Invoke(() =>
-                {
-                    Window parentWindow = Window.GetWindow(this);
-                    parentWindow?.Close();
-                });
-            }
-            catch (Exception ex)
-            {
-                Debug.Write(ex);
-            }
-        }
-
-        private void ProcessOnExited(object sender, EventArgs e)
-        {
-            ProcessExited();
-        }
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            if (!Process.HasExited)
-            {
-                Process.Kill();
-            }
-        }
-
-        private void Window_Closing(object sender, CancelEventArgs e)
-        {
-            if (KillProcessOnClose)
-            {
-                Process.Kill();
-            }
-            if (Process.HasExited)
-            {
-                return;
-            }
-            if (KillProcessOnClose)
-            {
-                e.Cancel = true;
-            }
-            var hWnd = Process.MainWindowHandle;
-            if (hWnd.ToInt32() != 0)
-            {
-                Win32Interop.PostMessage(hWnd, Win32Interop.WmClose, 0, 0);
-            }
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            LoadingAdorner.StartStopWait(grid);
-
-            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
-            timer.Start();
-            timer.Tick += (s, args) =>
-            {
-                timer.Stop();
-                LoadingAdorner.StartStopWait(grid);
-                Window parentWindow = Window.GetWindow(this);
-                if (parentWindow != null)
-                {
-                    parentWindow.Width += 1;
-                    parentWindow.Width -= 1;
-                }
-                _delay = 200;
-            };
-
-        }
-
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            Action action = delegate
-            {
-                if (Process != null && ContainerPanel != null)
-                {
-                    WindowHelper.ResizeExternalWindow(Process.MainWindowHandle, 0, 0,
-                        ContainerPanel.Width + WidthHeightIncrease, ContainerPanel.Height + WidthHeightIncrease);
-                }
-            };
-            if (_delay == 0)
-            {
-                action.Invoke();
-            }
-            else
-            {
-                _timedAction.ExecuteWithDelay(action, TimeSpan.FromMilliseconds(_delay));
-            }
-        }
 
         private void grid_Loaded(object sender, RoutedEventArgs e)
         {
@@ -205,13 +106,103 @@ namespace HostAppInPanelLib
             }
         }
 
+        public void ProcessExited()
+        {
+            try
+            {
+                Dispatcher.Invoke(() =>
+                {
+                    var parentWindow = Window.GetWindow(this);
+                    parentWindow?.Close();
+                });
+            }
+            catch (Exception ex)
+            {
+                Debug.Write(ex);
+            }
+        }
+
+        private void ProcessOnExited(object sender, EventArgs e)
+        {
+            ProcessExited();
+        }
+
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            Window parentWindow = Window.GetWindow(this);
+            var parentWindow = Window.GetWindow(this);
             parentWindow.SizeChanged += Window_SizeChanged;
             parentWindow.Closing += Window_Closing;
             parentWindow.Closed += Window_Closed;
             Window_Loaded(parentWindow, e);
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            if (!Process.HasExited)
+            {
+                Process.Kill();
+            }
+        }
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            if (KillProcessOnClose)
+            {
+                Process.Kill();
+            }
+            if (Process.HasExited)
+            {
+                return;
+            }
+            if (KillProcessOnClose)
+            {
+                e.Cancel = true;
+            }
+            var hWnd = Process.MainWindowHandle;
+            if (hWnd.ToInt32() != 0)
+            {
+                Win32Interop.PostMessage(hWnd, Win32Interop.WmClose, 0, 0);
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadingAdorner.StartStopWait(grid);
+
+            var timer = new DispatcherTimer {Interval = TimeSpan.FromSeconds(2)};
+            timer.Start();
+            timer.Tick += (s, args) =>
+            {
+                timer.Stop();
+                LoadingAdorner.StartStopWait(grid);
+                var parentWindow = Window.GetWindow(this);
+                if (parentWindow != null)
+                {
+                    parentWindow.Width += 1;
+                    parentWindow.Width -= 1;
+                }
+                _delay = 200;
+            };
+        }
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            Action action = delegate
+            {
+                if (Process != null && ContainerPanel != null)
+                {
+                    WindowHelper.ResizeExternalWindow(Process.MainWindowHandle, 0, 0,
+                        ContainerPanel.Width + WidthHeightIncrease, ContainerPanel.Height + WidthHeightIncrease);
+                }
+            };
+            if (_delay == 0)
+            {
+                action.Invoke();
+            }
+            else
+            {
+                _timedAction.ExecuteWithDelay(action, TimeSpan.FromMilliseconds(_delay));
+            }
         }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Windows;
 using HostAppInPanelLib;
-using OpenQA.Selenium;
 
-namespace HostAppInPanel
+namespace HostChromeInPanel
 {
     public static class Program
     {
