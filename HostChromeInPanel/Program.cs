@@ -1,32 +1,25 @@
 ﻿using System;
 using System.Windows;
 using HostAppInPanelLib;
+using HostAppInPanelLib.Utility;
 
 namespace HostChromeInPanel
 {
     public static class Program
     {
-        private static ChromeWrapperWindow _wrapperWindow;
-
-        private static void Application_Startup(object sender, StartupEventArgs e)
-        {
-            _wrapperWindow = new ChromeWrapperWindow();
-            _wrapperWindow.Loaded += Window_Loaded;
-            _wrapperWindow.Show();
-        }
+        private static WpfRunner _wpfRunner;
 
         [STAThread]
         public static void Main(string[] args)
         {
-            var application = new Application();
-            application.Startup += Application_Startup;
-            application.Run();
+            _wpfRunner = new WpfRunner(typeof(ChromeWrapperWindow), Window_Loaded);
+            _wpfRunner.RunWpfFromMain();
         }
 
 
         private static void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            _wrapperWindow.WebDriver.Url = "http://www.google.com";
+            ((ChromeWrapperWindow) _wpfRunner.WrapperWindow).WebDriver.Url = "http://www.google.com";
         }
     }
 }

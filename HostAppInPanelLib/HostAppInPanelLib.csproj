@@ -89,6 +89,7 @@
     <Compile Include="Utility\WindowFinder.cs" />
     <Compile Include="Utility\Win32\WindowPlacement.cs" />
     <Compile Include="Utility\WindowsByClassFinder.cs" />
+    <Compile Include="Utility\WpfRunner.cs" />
     <Compile Include="WindowHelper.cs" />
     <Compile Include="WrapperControl.xaml.cs">
       <DependentUpon>WrapperControl.xaml</DependentUpon>
