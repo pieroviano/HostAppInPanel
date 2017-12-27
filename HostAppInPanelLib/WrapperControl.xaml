@@ -8,7 +8,7 @@
              xmlns:wpfAdornedControl="clr-namespace:WpfAdornedControl;assembly=WpfAdornedControl"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded">
-    <wpfAdornedControl:AdornedControl Name="LoadingAdorner">
+    <!--<wpfAdornedControl:AdornedControl Name="LoadingAdorner">
         <wpfAdornedControl:AdornedControl.AdornerContent>
             <wpfControls:LoadingWait></wpfControls:LoadingWait>
         </wpfAdornedControl:AdornedControl.AdornerContent>
@@ -17,5 +17,5 @@
 
             </Grid>
         </Grid>
-    </wpfAdornedControl:AdornedControl>
+    </wpfAdornedControl:AdornedControl>-->
 </UserControl>

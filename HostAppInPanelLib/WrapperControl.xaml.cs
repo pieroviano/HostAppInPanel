@@ -17,9 +17,10 @@ namespace HostAppInPanelLib
     /// <summary>
     ///     Interaction logic for WrapperControl.xaml
     /// </summary>
-    public partial class WrapperControl : UserControl
+    public partial class WrapperControl
     {
         private readonly TimedAction _timedAction;
+        private readonly AdornedControlWithLoadingWait _adornedControl;
         private int _delay;
 
         public WrapperControl()
@@ -29,24 +30,34 @@ namespace HostAppInPanelLib
             FormsHost = new WindowsFormsHost();
             ContainerPanel = new Panel();
 
+            ContainerGrid = new Grid
+            {
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Stretch
+            };
+            ContainerGrid.Loaded += grid_Loaded;
+
+            _adornedControl = AdornedControlWithLoadingWait.AdornControl(this, ContainerGrid);
 
             _timedAction = new TimedAction();
         }
 
-        public AdornedControl LoadingAdornerControl => LoadingAdorner;
+        public AdornedControl LoadingAdornerControl => _adornedControl;
 
         public Panel ContainerPanel { get; set; }
+
         public int WidthHeightIncrease { get; set; }
+
         public WindowsFormsHost FormsHost { get; }
 
-        public Grid ContainerGrid => grid;
+        public Grid ContainerGrid { get; private set; }
 
-        public Grid ExternalGrid => externalGrid;
+        public Grid ExternalGrid => _adornedControl.ExternalGrid;
 
         public Thickness GridTickness
         {
-            get => grid.Margin;
-            set => grid.Margin = value;
+            get => ContainerGrid.Margin;
+            set => ContainerGrid.Margin = value;
         }
 
         public bool KillProcessOnClose { get; set; } = false;
@@ -63,7 +74,7 @@ namespace HostAppInPanelLib
 
             // Add the interop host control to the Grid
             // control's collection of child controls.
-            grid.Children.Add(FormsHost);
+            ContainerGrid.Children.Add(FormsHost);
 
             if (Process == null)
             {
@@ -130,10 +141,13 @@ namespace HostAppInPanelLib
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             var parentWindow = Window.GetWindow(this);
-            parentWindow.SizeChanged += Window_SizeChanged;
-            parentWindow.Closing += Window_Closing;
-            parentWindow.Closed += Window_Closed;
-            Window_Loaded(parentWindow, e);
+            if (parentWindow != null)
+            {
+                parentWindow.SizeChanged += Window_SizeChanged;
+                parentWindow.Closing += Window_Closing;
+                parentWindow.Closed += Window_Closed;
+                Window_Loaded(parentWindow, e);
+            }
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -165,16 +179,18 @@ namespace HostAppInPanelLib
             }
         }
 
+        // ReSharper disable UnusedParameter.Local
         private void Window_Loaded(object sender, RoutedEventArgs e)
+        // ReSharper restore UnusedParameter.Local
         {
-            LoadingAdorner.StartStopWait(grid);
+            _adornedControl.StartStopWait(ContainerGrid);
 
-            var timer = new DispatcherTimer {Interval = TimeSpan.FromSeconds(2)};
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
             timer.Start();
             timer.Tick += (s, args) =>
             {
                 timer.Stop();
-                LoadingAdorner.StartStopWait(grid);
+                _adornedControl.StartStopWait(ContainerGrid);
                 var parentWindow = Window.GetWindow(this);
                 if (parentWindow != null)
                 {
