@@ -55,6 +55,9 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfAdornedControl, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAdornedControl.PieroViano.1.0.0.2\lib\net461\WpfAdornedControl.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChromeWrapperControl.cs" />
@@ -120,12 +123,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\WpfAdornedControl\WpfAdornedControl\WpfAdornedControl.csproj">
-      <Project>{bfc4e960-d657-4aff-910c-396834743241}</Project>
-      <Name>WpfAdornedControl</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

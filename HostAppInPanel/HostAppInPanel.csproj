@@ -57,9 +57,8 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration" />
-    <Reference Include="WpfAdornedControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\WpfAdornedControl.PieroViano.1.0.0\lib\net461\WpfAdornedControl.dll</HintPath>
+    <Reference Include="WpfAdornedControl, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAdornedControl.PieroViano.1.0.0.2\lib\net461\WpfAdornedControl.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

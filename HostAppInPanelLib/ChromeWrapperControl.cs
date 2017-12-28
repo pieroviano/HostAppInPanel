@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Windows;
 using HostAppInPanelLib.Utility;
 using HostAppInPanelLib.Utility.Chrome;
@@ -14,7 +13,8 @@ namespace HostAppInPanelLib
 
         public ChromeWrapperControl()
         {
-            IntPtr chromeWindow=IntPtr.Zero;
+            var chromeWindow = IntPtr.Zero;
+
             void SetChromeWindow(IntPtr value)
             {
                 chromeWindow = value;
@@ -26,16 +26,14 @@ namespace HostAppInPanelLib
             }
 
             if (!ContainerPanel.IsHandleCreated)
+            {
                 ContainerPanel.CreateControl();
-            WebDriver = SeleniumUtility.GetChromeDriverHidden(out _chromeDriverService, ContainerPanel.Handle, SetChromeWindow);
-            Window parentWindow = Window.GetWindow(this);
+            }
+            WebDriver = SeleniumUtility.GetChromeDriverHidden(out _chromeDriverService, ContainerPanel.Handle,
+                SetChromeWindow);
             var processById = ChromeUtility.GetChromeProcess(GetChromeWindow);
             Process = processById;
             KillProcessOnClose = false;
-            if (parentWindow != null)
-            {
-                parentWindow.Closed += WindowOnClosed;
-            }
             Loaded += ChromeWrapperWindow_Loaded;
         }
 
@@ -45,9 +43,10 @@ namespace HostAppInPanelLib
         {
             WidthHeightIncrease = 2;
             GridTickness = new Thickness(-8, -6, -6, -6);
+            Application.Current.Exit += CurrentOnExit;
         }
 
-        private void WindowOnClosed(object sender, EventArgs eventArgs)
+        private void CurrentOnExit(object sender, ExitEventArgs exitEventArgs)
         {
             SeleniumUtility.KillSeleniumProcesses(_chromeDriverService);
         }
