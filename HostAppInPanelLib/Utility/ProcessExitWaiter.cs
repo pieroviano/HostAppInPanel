@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace HostAppInPanelLib.Utility
 {
-    class ProcessExitWaiter
+    internal class ProcessExitWaiter
     {
-        private Process _process;
+        private readonly Process _process;
         public EventHandler ProcessExited;
 
         public ProcessExitWaiter(Process process)
@@ -36,6 +32,5 @@ namespace HostAppInPanelLib.Utility
             var thread = new Thread(Start);
             thread.Start();
         }
-
     }
 }

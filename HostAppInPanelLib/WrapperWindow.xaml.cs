@@ -22,13 +22,13 @@ namespace HostAppInPanelLib
         public WrapperWindow()
         {
             InitializeComponent();
-            WrapperControl = new WrapperControl();
+            WrapperControl = new Controls.WrapperControl();
             WrapperControl.HorizontalAlignment = HorizontalAlignment.Stretch;
             WrapperControl.VerticalAlignment = VerticalAlignment.Stretch;
             Grid.Children.Add(WrapperControl);
         }
 
-        public WrapperControl WrapperControl { get; }
+        public Controls.WrapperControl WrapperControl { get; }
 
     }
 }

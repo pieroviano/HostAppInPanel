@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using HostAppInPanelLib.Controls;
 using OpenQA.Selenium;
 
 namespace HostAppInPanelLib

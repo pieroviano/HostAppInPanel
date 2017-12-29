@@ -4,9 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:hostAppInPanelLib="clr-namespace:HostAppInPanelLib"
+        xmlns:controls="clr-namespace:HostAppInPanelLib.Controls"
         mc:Ignorable="d"
         Title="WrapperWindow" Height="600" Width="800">
     <Grid Name="Grid">
-        <hostAppInPanelLib:WrapperControl AutomationProperties.Name="WrapperControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></hostAppInPanelLib:WrapperControl>
+        <controls:WrapperControl AutomationProperties.Name="WrapperControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></controls:WrapperControl>
     </Grid>
 </Window>
+

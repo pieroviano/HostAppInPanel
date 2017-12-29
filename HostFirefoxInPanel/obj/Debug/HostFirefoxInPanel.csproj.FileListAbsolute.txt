@@ -1,0 +1,15 @@
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\bin\Debug\HostFirefoxInPanel.exe.config
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\bin\Debug\HostFirefoxInPanel.exe
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\bin\Debug\HostFirefoxInPanel.pdb
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\bin\Debug\HostAppInPanelLib.dll
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\bin\Debug\WebDriver.dll
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\bin\Debug\WpfAdornedControl.dll
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\bin\Debug\HostAppInPanelLib.pdb
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\bin\Debug\WebDriver.xml
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\obj\Debug\HostFirefoxInPanel.csprojResolveAssemblyReference.cache
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\obj\Debug\HostFirefoxInPanel.Properties.Resources.resources
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\obj\Debug\HostFirefoxInPanel.csproj.GenerateResource.Cache
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\obj\Debug\HostFirefoxInPanel.csproj.CoreCompileInputs.cache
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\obj\Debug\HostFirefoxInPanel.exe
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\obj\Debug\HostFirefoxInPanel.pdb
+E:\Esempi Sviluppo\HostAppInPanel\HostFirefoxInPanel\bin\Debug\geckodriver.exe

@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,7 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChromeWrapperControl.cs" />
+    <Compile Include="Controls\BrowserWrapperControl.cs" />
+    <Compile Include="FirefoxWrapperWindow.xaml.cs">
+      <DependentUpon>FirefoxWrapperWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FirefoxWrapperControl.cs" />
+    <Compile Include="Controls\ChromeWrapperControl.cs" />
     <Compile Include="ChromeWrapperWindow.xaml.cs">
       <DependentUpon>ChromeWrapperWindow.xaml</DependentUpon>
     </Compile>
@@ -77,24 +84,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Utility\Chrome\ChromeUtility.cs" />
-    <Compile Include="Utility\Chrome\ChromeWindowFinder.cs" />
+    <Compile Include="Utility\Browser\BrowserUtility.cs" />
+    <Compile Include="Utility\Selenium\SeleniumUtility.Firefox.cs" />
+    <Compile Include="Utility\Selenium\SeleniumUtility.Chrome.cs" />
+    <Compile Include="Utility\Windows\FirefoxWindowFinder.cs" />
+    <Compile Include="Utility\Windows\ChromeWindowFinder.cs" />
+    <Compile Include="Utility\GetHiddenDriver.cs" />
     <Compile Include="Utility\TimedAction.cs" />
     <Compile Include="Utility\Win32\Fixed.cs" />
     <Compile Include="Utility\Win32\Point.cs" />
     <Compile Include="Utility\ProcessExitWaiter.cs" />
     <Compile Include="Utility\Win32\Rect.cs" />
-    <Compile Include="Utility\SeleniumUtility.cs" />
+    <Compile Include="Utility\Selenium\SeleniumUtility.cs" />
     <Compile Include="Utility\Win32\ShowInfo.cs" />
     <Compile Include="Utility\Win32\ShowWindowCommands.cs" />
     <Compile Include="Utility\Win32\TaskbarHider.cs" />
     <Compile Include="Utility\Win32\Win32Interop.cs" />
-    <Compile Include="Utility\WindowFinder.cs" />
+    <Compile Include="Utility\Windows\WindowFinder.cs" />
     <Compile Include="Utility\Win32\WindowPlacement.cs" />
-    <Compile Include="Utility\WindowsByClassFinder.cs" />
+    <Compile Include="Utility\Windows\WindowsByClassFinder.cs" />
     <Compile Include="Utility\WpfRunner.cs" />
     <Compile Include="WindowHelper.cs" />
-    <Compile Include="WrapperControl.xaml.cs">
+    <Compile Include="Controls\WrapperControl.xaml.cs">
       <DependentUpon>WrapperControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="WrapperWindow.xaml.cs">
@@ -111,11 +122,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="FirefoxWrapperWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ChromeWrapperWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WrapperControl.xaml">
+    <Page Include="Controls\WrapperControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

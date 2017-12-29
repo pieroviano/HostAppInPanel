@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Threading;
 
 namespace HostAppInPanelLib.Utility
@@ -17,14 +13,14 @@ namespace HostAppInPanelLib.Utility
             _dispatcherTimer = new DispatcherTimer();
             _dispatcherTimer.Interval = delay;
             _dispatcherTimer.Tag = action;
-            _dispatcherTimer.Tick += new EventHandler(timer_Tick);
+            _dispatcherTimer.Tick += timer_Tick;
             _dispatcherTimer.Start();
         }
 
-        void timer_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
-            DispatcherTimer timer = (DispatcherTimer)sender;
-            Action action = (Action)timer.Tag;
+            var timer = (DispatcherTimer) sender;
+            var action = (Action) timer.Tag;
 
             action.Invoke();
             timer.Stop();

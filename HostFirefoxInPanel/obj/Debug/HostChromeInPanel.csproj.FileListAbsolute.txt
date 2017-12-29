@@ -1,0 +1,15 @@
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\obj\Debug\HostChromeInPanel.csprojResolveAssemblyReference.cache
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\obj\Debug\HostChromeInPanel.Properties.Resources.resources
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\obj\Debug\HostChromeInPanel.csproj.GenerateResource.Cache
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\obj\Debug\HostChromeInPanel.csproj.CoreCompileInputs.cache
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\bin\Debug\chromedriver.exe
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\bin\Debug\HostChromeInPanel.exe.config
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\bin\Debug\HostChromeInPanel.exe
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\bin\Debug\HostChromeInPanel.pdb
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\bin\Debug\HostAppInPanelLib.dll
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\bin\Debug\WebDriver.dll
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\bin\Debug\WpfAdornedControl.dll
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\bin\Debug\HostAppInPanelLib.pdb
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\bin\Debug\WebDriver.xml
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\obj\Debug\HostChromeInPanel.exe
+E:\Esempi Sviluppo\HostAppInPanel\HostChromeInPanel\obj\Debug\HostChromeInPanel.pdb

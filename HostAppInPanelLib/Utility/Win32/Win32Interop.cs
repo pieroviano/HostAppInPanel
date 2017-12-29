@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Text;
+using HostAppInPanelLib.Utility.Windows;
 
 namespace HostAppInPanelLib.Utility.Win32
 {
@@ -11,9 +12,6 @@ namespace HostAppInPanelLib.Utility.Win32
         // An enumeration containing all the possible ShowInfo values.
 
         public const uint WmClose = 0x0010;
-
-        [DllImport("user32.dll", SetLastError = true)]
-        public static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
 
         [SuppressMessage("Microsoft.Security", "CA2118:ReviewSuppressUnmanagedCodeSecurityUsage")]
         [SuppressUnmanagedCodeSecurity]
@@ -56,6 +54,9 @@ namespace HostAppInPanelLib.Utility.Win32
 
         [DllImport("user32.dll", EntryPoint = "GetWindowTextLength", SetLastError = true)]
         internal static extern int GetWindowTextLength(IntPtr hwnd);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
 
         [DllImport("user32.Dll")]
         public static extern int PostMessage(IntPtr hWnd, uint msg, int wParam, int lParam);
