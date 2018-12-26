@@ -10,9 +10,11 @@ namespace HostAppInPanelLib.Utility
         public void ExecuteWithDelay(Action action, TimeSpan delay)
         {
             _dispatcherTimer?.Stop();
-            _dispatcherTimer = new DispatcherTimer();
-            _dispatcherTimer.Interval = delay;
-            _dispatcherTimer.Tag = action;
+            _dispatcherTimer = new DispatcherTimer
+            {
+                Interval = delay,
+                Tag = action
+            };
             _dispatcherTimer.Tick += timer_Tick;
             _dispatcherTimer.Start();
         }

@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using HostAppInPanelLib.Utility;
 using HostAppInPanelLib.Utility.Selenium;
 
 namespace HostAppInPanelLib.Controls

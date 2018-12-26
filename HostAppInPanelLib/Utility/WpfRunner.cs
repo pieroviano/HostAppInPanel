@@ -5,12 +5,12 @@ namespace HostAppInPanelLib.Utility
 {
     public class WpfRunner
     {
-        private readonly RoutedEventHandler _windowLoaded;
+        public readonly RoutedEventHandler WindowOnLoaded;
         private Type _type;
 
-        public WpfRunner(Type type, RoutedEventHandler windowOnLoaded = null)
+        public WpfRunner(Type type, RoutedEventHandler windowOnOnLoaded = null)
         {
-            _windowLoaded = windowOnLoaded;
+            WindowOnLoaded = windowOnOnLoaded;
             WrapperWindow = (Window) type.GetConstructor(new Type[0])?.Invoke(new object[0]);
         }
 
@@ -21,9 +21,9 @@ namespace HostAppInPanelLib.Utility
             var wpfRunner = this;
             if (wpfRunner.WrapperWindow != null)
             {
-                if (wpfRunner._windowLoaded != null)
+                if (wpfRunner.WindowOnLoaded != null)
                 {
-                    wpfRunner.WrapperWindow.Loaded += wpfRunner._windowLoaded;
+                    wpfRunner.WrapperWindow.Loaded += wpfRunner.WindowOnLoaded;
                 }
                 wpfRunner.WrapperWindow.Show();
             }

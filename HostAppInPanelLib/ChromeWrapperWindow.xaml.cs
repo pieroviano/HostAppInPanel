@@ -7,7 +7,7 @@ namespace HostAppInPanelLib
     /// <summary>
     ///     Interaction logic for ChromeWrapperWindow.xaml
     /// </summary>
-    public partial class ChromeWrapperWindow : Window
+    public partial class ChromeWrapperWindow
     {
         public ChromeWrapperWindow()
         {
@@ -16,6 +16,7 @@ namespace HostAppInPanelLib
             ChromeWrapperControl.HorizontalAlignment = HorizontalAlignment.Stretch;
             ChromeWrapperControl.VerticalAlignment = VerticalAlignment.Stretch;
             Grid.Children.Add(ChromeWrapperControl);
+            SetValue(WindowBehavior.HideCloseButtonProperty, true);
         }
 
         public ChromeWrapperControl ChromeWrapperControl { get; }

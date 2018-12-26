@@ -1,15 +1,19 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading;
 using System.Windows;
 using HostAppInPanelLib.Utility;
 using HostAppInPanelLib.Utility.Browser;
 using OpenQA.Selenium;
 using HostAppInPanelLib.Utility.Selenium;
+using OpenQA.Selenium.Remote;
 
 namespace HostAppInPanelLib.Controls
 {
     public class BrowserWrapperControl : WrapperControl
     {
-        protected readonly DriverService _driverService;
+        protected readonly DriverService DriverService;
 
         public BrowserWrapperControl(GetHiddenDriver getHiddenDriver, string processName)
         {
@@ -29,8 +33,11 @@ namespace HostAppInPanelLib.Controls
             {
                 ContainerPanel.CreateControl();
             }
-            WebDriver = getHiddenDriver?.Invoke(out _driverService, ContainerPanel.Handle,
+            var invoke = getHiddenDriver?.Invoke(out DriverService, ContainerPanel.Handle,
                 SetWindow);
+            WebDriver = invoke?.Item2;
+            //var windows = WebDriver?.WindowHandles.Select(e => long.Parse(e)).ToArray();
+            Thread = invoke?.Item1;
             var processById = BrowserUtility.GetBrowserProcess(GetWindow, processName);
             Process = processById;
             KillProcessOnClose = false;
@@ -39,9 +46,11 @@ namespace HostAppInPanelLib.Controls
 
         public IWebDriver WebDriver { get; }
 
+        public Thread Thread { get; }
+
         private void CurrentOnExit(object sender, ExitEventArgs exitEventArgs)
         {
-            SeleniumUtility.KillSeleniumProcesses(_driverService.ProcessId);
+            SeleniumUtility.KillSeleniumProcesses(DriverService.ProcessId);
         }
 
         protected virtual void Window_Loaded(object sender, RoutedEventArgs e)

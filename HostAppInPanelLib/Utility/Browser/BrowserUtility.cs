@@ -8,7 +8,7 @@ namespace HostAppInPanelLib.Utility.Browser
 {
     public class BrowserUtility
     {
-        public static Process GetBrowserProcess(Func<IntPtr> getChromeWindow, string processName)
+        public static Process GetBrowserProcess(Func<IntPtr> getBrowserWindow, string processName)
         {
             Process processById;
             try
@@ -16,17 +16,17 @@ namespace HostAppInPanelLib.Utility.Browser
                 do
                 {
                     uint processId;
-                    IntPtr chromeWindow;
+                    IntPtr browserWindow;
                     do
                     {
-                        chromeWindow = getChromeWindow.Invoke();
+                        browserWindow = getBrowserWindow.Invoke();
                         processId = 0;
-                        if (chromeWindow != IntPtr.Zero)
+                        if (browserWindow != IntPtr.Zero)
                         {
-                            Win32Interop.GetWindowThreadProcessId(chromeWindow, out processId);
+                            Win32Interop.GetWindowThreadProcessId(browserWindow, out processId);
                         }
                     } while (processId == 0);
-                    Win32Interop.GetWindowThreadProcessId(chromeWindow, out processId);
+                    Win32Interop.GetWindowThreadProcessId(browserWindow, out processId);
                     processById = Process.GetProcessById(unchecked((int) processId));
                 } while (processById.HasExited);
                 processById.EnableRaisingEvents = true;

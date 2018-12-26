@@ -17,10 +17,10 @@ namespace HostAppInPanelLib.Utility.Windows
         private WindowsByClassFinder(string className)
         {
             _className = className;
-            Win32Interop.EnumWindows(callback, IntPtr.Zero);
+            Win32Interop.EnumWindows(Callback, IntPtr.Zero);
         }
 
-        private bool callback(IntPtr hWnd, IntPtr lparam)
+        private bool Callback(IntPtr hWnd, IntPtr lparam)
         {
             if (Win32Interop.GetClassName(hWnd, _apiResult, _apiResult.Capacity) != 0)
             {
@@ -51,7 +51,7 @@ namespace HostAppInPanelLib.Utility.Windows
         {
             if (string.IsNullOrWhiteSpace(className))
             {
-                throw new ArgumentOutOfRangeException("className", className, "className can't be null or blank.");
+                throw new ArgumentOutOfRangeException(nameof(className), className, @"className can't be null or blank.");
             }
 
             return WindowsMatching(className);

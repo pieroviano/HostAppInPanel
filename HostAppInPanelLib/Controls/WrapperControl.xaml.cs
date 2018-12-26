@@ -65,7 +65,8 @@ namespace HostAppInPanelLib.Controls
         public Process Process { get; set; }
 
         public string Arguments { get; set; } = "";
-        public string ProcessPath { get; set; } = "notepad.exe";
+        public string ProcessPath { get;
+            set; } 
 
         private void grid_Loaded(object sender, RoutedEventArgs e)
         {
@@ -109,7 +110,7 @@ namespace HostAppInPanelLib.Controls
                 {
                     Debug.WriteLine(exception);
                 }
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
 
                 Win32Interop.SetParent(Process.MainWindowHandle, ContainerPanel.Handle);
                 WindowHelper.MakeExternalWindowBorderless(Process.MainWindowHandle, 0, 0, ContainerPanel.Width,

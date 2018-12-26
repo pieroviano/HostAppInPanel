@@ -1,1 +1,1 @@
-nuget push HostAppInPanelLib.PieroViano.1.0.0.3.nupkg oy2ejjkmnfvpna5ych5aqfiwzrzy7fxufjsigq5lylg7ki -Source https://api.nuget.org/v3/index.json
+nuget push HostAppInPanelLib.PieroViano.1.0.0.4.nupkg oy2ejjkmnfvpna5ych5aqfiwzrzy7fxufjsigq5lylg7ki -Source https://api.nuget.org/v3/index.json

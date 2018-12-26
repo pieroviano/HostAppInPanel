@@ -1,34 +1,62 @@
-﻿using System;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Threading;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Forms.Integration;
-using System.Windows.Threading;
-using HostAppInPanelLib.Utility;
-using HostAppInPanelLib.Utility.Win32;
-using OpenQA.Selenium;
-using WpfAdornedControl.WpfControls.Extensions;
-using Panel = System.Windows.Forms.Panel;
+﻿using System.Windows;
+using HostAppInPanelLib.Controls;
 
 namespace HostAppInPanelLib
 {
     /// <summary>
     ///     Interaction logic for WrapperWindow.xaml
     /// </summary>
-    public partial class WrapperWindow : Window
+    public partial class WrapperWindow
     {
-        public WrapperWindow()
+        public WrapperWindow(string fileName)
         {
             InitializeComponent();
-            WrapperControl = new Controls.WrapperControl();
-            WrapperControl.HorizontalAlignment = HorizontalAlignment.Stretch;
-            WrapperControl.VerticalAlignment = VerticalAlignment.Stretch;
+            if (WrapperControl == null)
+            {
+                WrapperControl = new WrapperControl
+                {
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                    VerticalAlignment = VerticalAlignment.Stretch,
+                    ProcessPath = fileName
+                };
+            }
+            else
+            {
+                WrapperControl.HorizontalAlignment = HorizontalAlignment.Stretch;
+                WrapperControl.VerticalAlignment = VerticalAlignment.Stretch;
+                WrapperControl.ProcessPath = fileName;
+            }
+
             Grid.Children.Add(WrapperControl);
         }
 
-        public Controls.WrapperControl WrapperControl { get; }
+        public WrapperWindow()
+        {
+            InitializeComponent();
+            if (WrapperControl == null)
+            {
+                WrapperControl = new WrapperControl
+                {
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                    VerticalAlignment = VerticalAlignment.Stretch
+                };
+            }
+            else
+            {
+                WrapperControl.HorizontalAlignment = HorizontalAlignment.Stretch;
+                WrapperControl.VerticalAlignment = VerticalAlignment.Stretch;
+            }
 
+            Grid.Children.Add(WrapperControl);
+        }
+
+        public string ProcessPath
+        {
+            get => WrapperControl.ProcessPath;
+            set => WrapperControl.ProcessPath = value;
+        }
+
+
+        public WrapperControl WrapperControl { get; }
     }
 }

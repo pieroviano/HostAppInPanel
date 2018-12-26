@@ -14,7 +14,7 @@ namespace HostAppInPanelLib.Utility.Selenium
 {
     public partial class SeleniumUtility
     {
-        private static void FindBrowserWindow(Action<IntPtr> setChromeWindow,
+        private static Thread FindBrowserWindow(Action<IntPtr> setChromeWindow,
             Tuple<Func<IEnumerable<IntPtr>>, string> tuple)
         {
             void Start(object param)
@@ -43,10 +43,11 @@ namespace HostAppInPanelLib.Utility.Selenium
                 setChromeWindow(window);
             }
 
-            var thread = new Thread(Start);
+            Thread thread = new Thread(Start);
             thread.Priority = ThreadPriority.AboveNormal;
             thread
                 .Start(tuple);
+            return thread;
         }
 
         public static List<Process> GetBrowserProcesses(int processId)

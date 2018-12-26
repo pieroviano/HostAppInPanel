@@ -28,7 +28,8 @@ namespace HostAppInPanel
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var wrapperWindow = new WrapperWindow();
+            var fileName = System.IO.Path.Combine(Environment.SystemDirectory,"notepad.exe");
+            var wrapperWindow = new WrapperWindow(fileName);
             wrapperWindow.ShowDialog();
         }
     }

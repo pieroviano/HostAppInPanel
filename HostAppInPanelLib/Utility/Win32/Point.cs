@@ -2,7 +2,7 @@
 {
         public struct Point
         {
-            public Fixed x;
-            public Fixed y;
+            public Fixed X;
+            public Fixed Y;
         }
 }

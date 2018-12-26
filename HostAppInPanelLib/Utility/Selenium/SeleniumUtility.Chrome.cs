@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using HostAppInPanelLib.Utility.Windows;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -9,7 +10,7 @@ namespace HostAppInPanelLib.Utility.Selenium
 {
     public partial class SeleniumUtility
     {
-        public static IWebDriver GetChromeDriverHidden(out DriverService chromeDriverService, IntPtr containerHandle,
+        public static Tuple<Thread, IWebDriver> GetChromeDriverHidden(out DriverService chromeDriverService, IntPtr containerHandle,
             Action<IntPtr> setChromeWindow)
         {
             chromeDriverService = ChromeDriverService.CreateDefaultService();
@@ -25,8 +26,8 @@ namespace HostAppInPanelLib.Utility.Selenium
             var tuple = new Tuple<Func<IEnumerable<IntPtr>>, string>(ChromeWindowFinder.ChromeWindows,
                 "data:, - Google Chrome");
 
-            FindBrowserWindow(setChromeWindow, tuple);
-            return new ChromeDriver((ChromeDriverService) chromeDriverService, options);
+            var findBrowserWindow = FindBrowserWindow(setChromeWindow, tuple);
+            return  new Tuple<Thread, IWebDriver>(findBrowserWindow, new ChromeDriver((ChromeDriverService) chromeDriverService, options));
         }
 
     }
