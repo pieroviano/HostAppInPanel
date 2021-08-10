@@ -9,3 +9,5 @@
 /HostAppInPanelLib/obj
 /HostChromeInPanel/bin
 /HostChromeInPanel/obj
+/packages
+/.vs/HostAppInPanel/v16
