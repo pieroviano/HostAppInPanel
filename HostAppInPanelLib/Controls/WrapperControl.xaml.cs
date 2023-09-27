@@ -122,11 +122,11 @@ namespace HostAppInPanelLib.Controls
         {
             try
             {
-                Dispatcher.Invoke(() =>
+                Dispatcher.Invoke(new Action(() =>
                 {
                     var parentWindow = Window.GetWindow(this);
                     parentWindow?.Close();
-                });
+                }));
             }
             catch (Exception ex)
             {

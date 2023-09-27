@@ -1,17 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostAppInPanel", "HostAppInPanel\HostAppInPanel.csproj", "{589BE371-BDB2-4F65-B7E8-CE080241069D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostAppInPanel", "HostAppInPanel\HostAppInPanel.csproj", "{589BE371-BDB2-4F65-B7E8-CE080241069D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostAppInPanelLib", "HostAppInPanelLib\HostAppInPanelLib.csproj", "{69CFBE7E-52AB-4B81-A9F9-52830B9D9748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostAppInPanelLib", "HostAppInPanelLib\HostAppInPanelLib.csproj", "{69CFBE7E-52AB-4B81-A9F9-52830B9D9748}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostChromeInPanel", "HostChromeInPanel\HostChromeInPanel.csproj", "{6DA8F54A-E0C6-4F32-87EC-EEC99E026554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostChromeInPanel", "HostChromeInPanel\HostChromeInPanel.csproj", "{6DA8F54A-E0C6-4F32-87EC-EEC99E026554}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Applications", "Test Applications", "{9C67A2FE-0D79-4280-9907-8119FDC1BF2F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{BFFE92AD-3949-420D-AEEA-E82FDC490532}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BCD65653-15B2-406E-A24E-B71DB192DAED}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Build.bat = Build.bat
+		Directory.Build.props = Directory.Build.props
+		Directory.NuGet.props = Directory.NuGet.props
+		..\Nuget.Config = ..\Nuget.Config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
