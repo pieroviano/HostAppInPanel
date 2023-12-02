@@ -5,7 +5,6 @@
     <VersionBuildSuffix Condition="'$(Configuration)'!='Release'">*-*</VersionBuildSuffix>
     <VersionBuildSuffix Condition="'$(Configuration)'=='Release'">*</VersionBuildSuffix>
     <DirectoryNuGet>true</DirectoryNuGet>
-    <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)' == ''">2.0.12</NuGetUtilityVersion>
     <ImmatricolazioniWsLibrariesVersion>1.1.0</ImmatricolazioniWsLibrariesVersion>
     <FatturaElettronicaVersion>3.2.0</FatturaElettronicaVersion>
     <DocumentoUnicoLibrariesVersion>2.1.0</DocumentoUnicoLibrariesVersion>
@@ -65,7 +64,7 @@
     <IoCLibraryVersion>1.5.0</IoCLibraryVersion>
     <TouchLibraryVersion>1.1.0</TouchLibraryVersion>
     <InjectModuleInitializerVersion>1.1.0</InjectModuleInitializerVersion>
-    <DapperLibraryVersion>1.1.0</DapperLibraryVersion>
+    <DapperLibraryVersion>1.2.0</DapperLibraryVersion>
     <PinnedLibraryVersion>1.1.0</PinnedLibraryVersion>
     <WhenTheVersionVersion>1.1.0</WhenTheVersionVersion>
     <Net4xExtensionsVersion>2.3.0</Net4xExtensionsVersion>
@@ -99,7 +98,7 @@
     <iTextCoreVersion>1.1.0</iTextCoreVersion>
     <PdfRepresentationVersion>1.1.0</PdfRepresentationVersion>
     <StarbVersion>23.5.0</StarbVersion>
-    <NuGetUtilityVersion>2.0.11</NuGetUtilityVersion>
+    <NuGetUtilityVersion>2.0.12</NuGetUtilityVersion>
     <DocumentoUnicoVersion>2.1.0</DocumentoUnicoVersion>
     <SystemDataDataSetExtensionsVersion>4.5.0</SystemDataDataSetExtensionsVersion>
     <PagedListVersion>4.5.0</PagedListVersion>
@@ -140,5 +139,10 @@
     <WpfAdornedControlVersion>1.0.0</WpfAdornedControlVersion>
     <CreateHiddenProcessVersion>1.0.0</CreateHiddenProcessVersion>
     <HostAppInPanelVersion>1.0.0</HostAppInPanelVersion>
+    <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)' == ''">2.0.12</NuGetUtilityVersion>
+    <SeleniumLibraryVersion>1.0.0</SeleniumLibraryVersion>
+    <CodiceFiscaleVersion>1.0.0</CodiceFiscaleVersion>
+    <SystemDrawingCommon8Version>8.0.0</SystemDrawingCommon8Version>
+    <Net4xBuffersVersion>1.0.0</Net4xBuffersVersion>
   </PropertyGroup>
 </Project>
