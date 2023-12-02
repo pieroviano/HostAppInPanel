@@ -17,11 +17,11 @@
     <FluentValidationVersion>11.5.2</FluentValidationVersion>
     <FluentValidation9Version>9.2.2</FluentValidation9Version>
     <UnitTestLibrary>1.1.0</UnitTestLibrary>
-    <SerilogExtensionsLoggingVersion>3.1.1</SerilogExtensionsLoggingVersion>
-    <SerilogSinksFileVersion>5.0.1</SerilogSinksFileVersion>
-    <SerilogSyncConsoleVersion>4.1.1</SerilogSyncConsoleVersion>
-    <SerilogVersion>2.12.1</SerilogVersion>
-    <FreeImageDotnetCoreVersion>4.4.0</FreeImageDotnetCoreVersion>
+    <SerilogExtensionsLoggingVersion>3.1.2</SerilogExtensionsLoggingVersion>
+    <SerilogSinksFileVersion>5.0.2</SerilogSinksFileVersion>
+    <SerilogSyncConsoleVersion>4.1.2</SerilogSyncConsoleVersion>
+    <SerilogVersion>2.12.2</SerilogVersion>
+    <FreeImageDotnetCoreVersion>4.4.1</FreeImageDotnetCoreVersion>
     <SchedulerLibraryVersion>1.1.0</SchedulerLibraryVersion>
     <EFProviderWrappersVersion>1.9.0</EFProviderWrappersVersion>
     <ExcelLibraryVersion>1.16.0</ExcelLibraryVersion>
@@ -29,7 +29,7 @@
     <HtmlCleanerVersion>1.1.0</HtmlCleanerVersion>
     <TaskSchedulerLibraryVersion>1.1.0</TaskSchedulerLibraryVersion>
     <Net4xiTextVersion>1.1.0</Net4xiTextVersion>
-    <PdfCompressorLibraryVersion>1.1.0</PdfCompressorLibraryVersion>
+    <PdfCompressorLibraryVersion>1.1.1</PdfCompressorLibraryVersion>
     <EmailLibraryVersion>1.1.0</EmailLibraryVersion>
     <ArchiveDatabaseLibraryVersion>1.2.0</ArchiveDatabaseLibraryVersion>
     <VisualBasicLibraryVersion>1.1.0</VisualBasicLibraryVersion>
@@ -38,15 +38,15 @@
     <PdfOcrVersion>1.1.0</PdfOcrVersion>
     <PdfViewerLibraryVersion>2.0.0</PdfViewerLibraryVersion>
     <TitaniumProxyLibraryVersion>1.56.0</TitaniumProxyLibraryVersion>
-    <TitaniumWebProxyVersion>1.1.0</TitaniumWebProxyVersion>
+    <TitaniumWebProxyVersion>2.0.0</TitaniumWebProxyVersion>
     <WebBrowserLibraryVersion>1.2.0</WebBrowserLibraryVersion>
     <ServiceLibraryVersion>1.54</ServiceLibraryVersion>
     <CommandBindingLibraryVersion>1.1.0</CommandBindingLibraryVersion>
     <UpdateLibraryVersion>1.28.0</UpdateLibraryVersion>
     <DataGridLibraryVersion>1.48.0</DataGridLibraryVersion>
     <WindowsLibraryVersion>1.0.48</WindowsLibraryVersion>
-    <DatabaseSchemaLibraryVersion>1.20.0</DatabaseSchemaLibraryVersion>
-    <DatabaseEditorLibraryVersion>1.20.0</DatabaseEditorLibraryVersion>
+    <DatabaseSchemaLibraryVersion>1.21.0</DatabaseSchemaLibraryVersion>
+    <DatabaseEditorLibraryVersion>1.21.0</DatabaseEditorLibraryVersion>
     <WiaScannerLibraryVersion>1.22.0</WiaScannerLibraryVersion>
     <QuestionsLibraryVersion>1.38.0</QuestionsLibraryVersion>
     <OcrLibraryVersion>1.0.0</OcrLibraryVersion>
@@ -57,26 +57,26 @@
     <FormLoggingVersion>1.1.0</FormLoggingVersion>
     <EntityFrameworkLibVersion>1.1.0</EntityFrameworkLibVersion>
     <UtilityLibraryVersion>1.1.0</UtilityLibraryVersion>
-    <AppDomainTaskLibraryVersion>1.8.1</AppDomainTaskLibraryVersion>
+    <AppDomainTaskLibraryVersion>1.8.2</AppDomainTaskLibraryVersion>
     <ConfigurationLibraryVersion>1.3.0</ConfigurationLibraryVersion>
     <DataAccessLibraryVersion>2.1.0</DataAccessLibraryVersion>
-    <CoreLibraryVersion>2.1.0</CoreLibraryVersion>
+    <CoreLibraryVersion>2.2.0</CoreLibraryVersion>
     <IoCLibraryVersion>1.5.0</IoCLibraryVersion>
-    <TouchLibraryVersion>1.1.0</TouchLibraryVersion>
-    <InjectModuleInitializerVersion>1.1.0</InjectModuleInitializerVersion>
+    <TouchLibraryVersion>1.1.1</TouchLibraryVersion>
+    <InjectModuleInitializerVersion>1.2.0</InjectModuleInitializerVersion>
     <DapperLibraryVersion>1.2.0</DapperLibraryVersion>
-    <PinnedLibraryVersion>1.1.0</PinnedLibraryVersion>
-    <WhenTheVersionVersion>1.1.0</WhenTheVersionVersion>
+    <PinnedLibraryVersion>1.2.0</PinnedLibraryVersion>
+    <WhenTheVersionVersion>1.1.1</WhenTheVersionVersion>
     <Net4xExtensionsVersion>2.3.0</Net4xExtensionsVersion>
-    <Net4XRuntimeCachingVersion>1.1.0</Net4XRuntimeCachingVersion>
-    <Net4xAsyncBridgeVersion>1.1.0</Net4xAsyncBridgeVersion>
-    <Net4xBaseTypesVersion>1.1.0</Net4xBaseTypesVersion>
-    <Net4xValueTupleVersion>1.1.0</Net4xValueTupleVersion>
-    <Net4xMsTestsVersion>1.1.0</Net4xMsTestsVersion>
-    <Net30LinqBridgeVersion>1.3.0</Net30LinqBridgeVersion>
-    <Net35ThreadingTasksVersion>1.1.0</Net35ThreadingTasksVersion>
-    <Net35ActionsVersion>1.1.0</Net35ActionsVersion>
-    <Net35ThredingTasksVersion>1.1.0</Net35ThredingTasksVersion>
+    <Net4XRuntimeCachingVersion>1.2.0</Net4XRuntimeCachingVersion>
+    <Net4xAsyncBridgeVersion>1.2.0</Net4xAsyncBridgeVersion>
+    <Net4xBaseTypesVersion>1.2.0</Net4xBaseTypesVersion>
+    <Net4xValueTupleVersion>1.3.0</Net4xValueTupleVersion>
+    <Net4xMsTestsVersion>1.2.0</Net4xMsTestsVersion>
+    <Net30LinqBridgeVersion>1.5.0</Net30LinqBridgeVersion>
+    <Net35ThreadingTasksVersion>1.4.0</Net35ThreadingTasksVersion>
+    <Net35ActionsVersion>1.3.0</Net35ActionsVersion>
+    <Net35ThredingTasksVersion>1.4.0</Net35ThredingTasksVersion>
     <MSBuildCommunityTasksVersion>1.6.0</MSBuildCommunityTasksVersion>
     <DotNetZipVersion>1.16.0</DotNetZipVersion>
     <ObfuscarVersion>2.2.37</ObfuscarVersion>
@@ -84,10 +84,10 @@
     <EntityFrameworkVersion>6.4.4</EntityFrameworkVersion>
     <NewtonsoftJsonVersion>13.0.3</NewtonsoftJsonVersion>
     <NuGetUtilityPocVersion>1.0.0</NuGetUtilityPocVersion>
-    <PackAsToolVersion>1.0.0</PackAsToolVersion>
+    <PackAsToolVersion>1.1.0</PackAsToolVersion>
     <serilog-sinks-fileVersion>5.0.1</serilog-sinks-fileVersion>
     <DapperLibrariesVersion>1.0.0</DapperLibrariesVersion>
-    <Html2XhtmlVersion>1.1.4</Html2XhtmlVersion>
+    <Html2XhtmlVersion>1.1.5</Html2XhtmlVersion>
     <BackgroundWorkerLibraryVersion>2.1.0</BackgroundWorkerLibraryVersion>
     <CoreLibrarySerilogLoggerVersion>2.1.0</CoreLibrarySerilogLoggerVersion>
     <WebBrowserLibraryInterfacesVersion>1.2.0</WebBrowserLibraryInterfacesVersion>
@@ -136,13 +136,16 @@
     <BrutalDevStrongNameSignerVersion>3.2.1</BrutalDevStrongNameSignerVersion>
     <ValuesFromSelectVersion>1.0.0</ValuesFromSelectVersion>
     <HostProcessLibrary>1.0.0</HostProcessLibrary>
-    <WpfAdornedControlVersion>1.0.0</WpfAdornedControlVersion>
-    <CreateHiddenProcessVersion>1.0.0</CreateHiddenProcessVersion>
-    <HostAppInPanelVersion>1.0.0</HostAppInPanelVersion>
+    <WpfAdornedControlVersion>1.1.0</WpfAdornedControlVersion>
+    <CreateHiddenProcessVersion>1.1.0</CreateHiddenProcessVersion>
+    <HostAppInPanelVersion>1.1.0</HostAppInPanelVersion>
     <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)' == ''">2.0.12</NuGetUtilityVersion>
     <SeleniumLibraryVersion>1.0.0</SeleniumLibraryVersion>
     <CodiceFiscaleVersion>1.0.0</CodiceFiscaleVersion>
     <SystemDrawingCommon8Version>8.0.0</SystemDrawingCommon8Version>
     <Net4xBuffersVersion>1.0.0</Net4xBuffersVersion>
+    <Net35TypeInfoVersion>1.4.0</Net35TypeInfoVersion>
+    <PackAsLibraryVersion>1.1.0</PackAsLibraryVersion>
+    <TitaniumWebProxyNet40Version>2.0.0</TitaniumWebProxyNet40Version>
   </PropertyGroup>
 </Project>
