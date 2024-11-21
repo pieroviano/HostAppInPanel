@@ -10,7 +10,7 @@
         <Company>Piero Viano</Company>
         <Product>HostAppInPanelLib</Product>
         <Description>Hosts Applicatoion in WPF application</Description>
-        <Copyright>Copyright (c) Piero Viano 2017-2024. All rights reserved.</Copyright>
+        <Copyright>Copyright (c) Piero Viano. All rights reserved.</Copyright>
         <Version>$(VersionPrefix).$(VersionSuffix)</Version>
         <UseWPF>true</UseWPF>
         <UseWindowsForms>true</UseWindowsForms>
