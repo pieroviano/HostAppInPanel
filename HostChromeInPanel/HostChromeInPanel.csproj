@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-    <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" />
+    <Import Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" />
     <PropertyGroup>
         <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
         <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
@@ -17,21 +17,21 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="Microsoft.CSharp" />
+        <Reference Include="PresentationCore" />
+        <Reference Include="PresentationFramework" />
         <Reference Include="System.Data.DataSetExtensions" />
         <Reference Include="System.Net.Http" />
         <Reference Include="System.Xaml" />
         <Reference Include="WindowsBase" />
-        <Reference Include="PresentationCore" />
-        <Reference Include="PresentationFramework" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\HostAppInPanelLib\HostAppInPanelLib.csproj" />
     </ItemGroup>
     <ItemGroup>
+        <PackageReference Include="Net4x.WpfAdornedControl" Version="$(WpfAdornedControlVersion).$(VersionBuildSuffix)" />
+        <PackageReference Include="NuGetUtility" PrivateAssets="All" Version="$(NuGetUtilityVersion)" />
         <PackageReference Include="Selenium.Chrome.WebDriver" Version="2.45.0" />
         <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-        <PackageReference Include="Net4x.WpfAdornedControl" Version="$(WpfAdornedControlVersion).$(VersionBuildSuffix)" />
-        <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" />
     </ItemGroup>
-    <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" />
+    <Import Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" />
 </Project>

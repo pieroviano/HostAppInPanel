@@ -7352,6 +7352,11 @@
             "Version": "$(NuGetUtilityVersion)"
           }
         ]
+      },
+      {
+        "Name": "Net4x.Buffers\\Net4x.SystemBuffers.csproj",
+        "Project": "Net4x.SystemBuffers",
+        "PackageReferences": null
       }
     ]
   },
@@ -15050,6 +15055,16 @@
             "Version": null
           }
         ]
+      },
+      {
+        "Name": "src\\IdentityServer4.EntityFramework.csproj",
+        "Project": "Net8.IdentityServer4.EntityFramework.Base",
+        "PackageReferences": null
+      },
+      {
+        "Name": "test\\IdentityServer4.EntityFramework.Tests\\IdentityServer4.EntityFramework.Tests.csproj",
+        "Project": "IdentityServer4.EntityFramework.Tests",
+        "PackageReferences": null
       }
     ]
   },
@@ -23907,6 +23922,11 @@
         "Name": "CompileTestsGeneratedCode\\ClassWrappers.csproj",
         "Project": "Net4x.ClassWrappers",
         "PackageReferences": null
+      },
+      {
+        "Name": "CompileTestsGeneratedCode\\ClassWrappers.csproj",
+        "Project": "ClassWrappers",
+        "PackageReferences": null
       }
     ]
   },
@@ -24733,6 +24753,188 @@
       {
         "Name": "Net4x.DotNetZip",
         "Project": "Zip\\DotNetZip.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1.sln",
+      "Version": "WindowsFormsApp1Version"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "WindowsFormsApp1",
+        "Project": "WindowsFormsApp1\\WindowsFormsApp1.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\IdentityServer4\\src\\IdentityServer4.sln",
+      "Version": "IdentityServer4Version"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net6.IdentityServer4.Storage",
+        "Project": "Storage\\src\\IdentityServer4.Storage.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net6.IdentityServer4.Base",
+        "Project": "IdentityServer4\\src\\IdentityServer4.Base.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "EntityFramework.Storage\\src\\IdentityServer4.EntityFramework.Storage.csproj",
+        "Project": "Net6.IdentityServer4.EntityFramework.Storage",
+        "PackageReferences": null
+      },
+      {
+        "Name": "EntityFramework\\src\\IdentityServer4.EntityFramework.csproj",
+        "Project": "Net6.IdentityServer4.EntityFramework.Base",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Storage\\src\\IdentityServer4.Storage.csproj",
+        "Project": "Net8.IdentityServer4.Storage",
+        "PackageReferences": null
+      },
+      {
+        "Name": "IdentityServer4\\src\\IdentityServer4.Base.csproj",
+        "Project": "Net8.IdentityServer4.Base",
+        "PackageReferences": null
+      },
+      {
+        "Name": "EntityFramework.Storage\\src\\IdentityServer4.EntityFramework.Storage.csproj",
+        "Project": "Net8.IdentityServer4.EntityFramework.Storage",
+        "PackageReferences": null
+      },
+      {
+        "Name": "EntityFramework\\src\\IdentityServer4.EntityFramework.csproj",
+        "Project": "Net8.IdentityServer4.EntityFramework.Base",
+        "PackageReferences": null
+      },
+      {
+        "Name": "IdentityServer4\\test\\IdentityServer.UnitTests\\IdentityServer.UnitTests.csproj",
+        "Project": "IdentityServer.UnitTests",
+        "PackageReferences": null
+      },
+      {
+        "Name": "IdentityServer4\\test\\IdentityServer.IntegrationTests\\IdentityServer.IntegrationTests.csproj",
+        "Project": "IdentityServer.IntegrationTests",
+        "PackageReferences": null
+      },
+      {
+        "Name": "EntityFramework.Storage\\test\\UnitTests\\IdentityServer4.EntityFramework.UnitTests.csproj",
+        "Project": "IdentityServer4.EntityFramework.UnitTests",
+        "PackageReferences": null
+      },
+      {
+        "Name": "EntityFramework.Storage\\test\\IntegrationTests\\IdentityServer4.EntityFramework.IntegrationTests.csproj",
+        "Project": "IdentityServer4.EntityFramework.IntegrationTests",
+        "PackageReferences": null
+      },
+      {
+        "Name": "EntityFramework\\test\\IdentityServer4.EntityFramework.Tests\\IdentityServer4.EntityFramework.Tests.csproj",
+        "Project": "IdentityServer4.EntityFramework.Tests",
+        "PackageReferences": null
+      },
+      {
+        "Name": "IdentityServer4\\host\\Host.csproj",
+        "Project": "Host",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\Starb\\Starb.sln",
+      "Version": "StarbVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "VbExplorer.CustomAction",
+        "Project": "VbExplorer\\VbExplorerCustomAction\\VbExplorerCustomAction.vbproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\OpenSearch.Extensions\\OpenSearch.Extensions.sln",
+      "Version": "OpenSearchExtensionsVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.OpenSearch.Extensions",
+        "Project": "OpenSearch.Extensions\\OpenSearch.Extensions.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\NuGetUtility\\CompileLibrary\\CompileLibrary.sln",
+      "Version": "CompileLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CompileLibrary",
+        "Project": "CompileLibrary\\CompileLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\PdfViewerLibrary\\PdfLibNet\\PdfLibNet.x64.NetCore.sln",
+      "Version": "PdfLibNetx64NetCoreVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfLibNetLibrary",
+        "Project": "PdfLibNetLibrary\\PdfLibNetLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\PdfViewerLibrary\\PdfLibNet\\PdfLibNet.x64.sln",
+      "Version": "PdfLibNetx64Version"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfLibNetLibrary",
+        "Project": "PdfLibNetLibrary\\PdfLibNetLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\PdfViewerLibrary\\PdfLibNet\\PdfLibNet.x86.NetCore.sln",
+      "Version": "PdfLibNetx86NetCoreVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfLibNetLibrary",
+        "Project": "PdfLibNetLibrary\\PdfLibNetLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\PdfViewerLibrary\\PdfLibNet\\PdfLibNet.x86.sln",
+      "Version": "PdfLibNetx86Version"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfLibNetLibrary",
+        "Project": "PdfLibNetLibrary\\PdfLibNetLibrary.csproj",
         "PackageReferences": null
       }
     ]

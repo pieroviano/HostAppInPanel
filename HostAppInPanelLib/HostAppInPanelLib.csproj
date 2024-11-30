@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-    <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" />
+    <Import Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" />
     <PropertyGroup>
         <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -23,14 +23,14 @@
         <PackageId>Net4x.$(MSBuildProjectName)</PackageId>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="System.Management" Version="7.0.2" Condition="'$(TargetFramework)'=='net6.0-windows'" />
-        <PackageReference Include="System.Management" Version="5.0.0" Condition="'$(TargetFramework)'=='net5.0-windows'" />
         <PackageReference Include="log4net" Version="2.0.12" />
         <PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" />
         <PackageReference Include="Net4x.CreateHiddenProcessLib" Version="$(CreateHiddenProcessVersion).$(VersionBuildSuffix)" />
         <PackageReference Include="Net4x.WpfAdornedControl" Version="$(WpfAdornedControlVersion).$(VersionBuildSuffix)" />
+        <PackageReference Include="NuGetUtility" PrivateAssets="All" Version="$(NuGetUtilityVersion)" />
         <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-        <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" />
+        <PackageReference Include="System.Management" Condition="'$(TargetFramework)'=='net5.0-windows'" Version="5.0.0" />
+        <PackageReference Include="System.Management" Condition="'$(TargetFramework)'=='net6.0-windows'" Version="7.0.2" />
     </ItemGroup>
     <ItemGroup>
         <Compile Remove="Utility\Selenium\FirefoxDriverEx.cs" />
@@ -41,5 +41,5 @@
         <Reference Include="System.Management" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40' or '$(TargetFramework)'=='net45'" />
         <Reference Include="WindowsFormsIntegration" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40' or '$(TargetFramework)'=='net45'" />
     </ItemGroup>
-    <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" />
+    <Import Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" />
 </Project>
