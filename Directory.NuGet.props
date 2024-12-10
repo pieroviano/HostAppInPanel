@@ -4,13 +4,15 @@
     <NuGetPackageRoot Condition="'$(NuGetPackageRoot)'=='' and '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' != 'true'">~/.nuget/packages/</NuGetPackageRoot>
     <VersionBuildSuffix Condition="'$(Configuration)'!='Release'">*</VersionBuildSuffix>
     <VersionBuildSuffix Condition="'$(Configuration)'=='Release'">*</VersionBuildSuffix>
-    <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)' == ''">2.5.0</NuGetUtilityVersion>
+    <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)' == ''">1.0.0</NuGetUtilityVersion>
     <DirectoryNuGet>true</DirectoryNuGet>
     <AggiuntaSTAVersion>1.0.0</AggiuntaSTAVersion>
+    <AppDomainAlternativenugetVersion>1.9.0</AppDomainAlternativenugetVersion>
     <AppDomainAlternativeVersion>1.9.0</AppDomainAlternativeVersion>
     <AppDomainTaskLibrarynugetVersion>1.9.0</AppDomainTaskLibrarynugetVersion>
     <AppDomainTaskLibraryVersion>1.9.0</AppDomainTaskLibraryVersion>
     <ArchiveDatabaseLibraryVersion>1.2.1</ArchiveDatabaseLibraryVersion>
+    <AsyncEnumerablenugetVersion>1.3.0</AsyncEnumerablenugetVersion>
     <AsyncEnumerableVersion>1.3.0</AsyncEnumerableVersion>
     <AuthenticatorYubiKeynugetVersion>3.3.0</AuthenticatorYubiKeynugetVersion>
     <AuthenticatorYubiKeyVersion>3.3.0</AuthenticatorYubiKeyVersion>
@@ -19,37 +21,54 @@
     <BackgroundWorkerLibraryVersion>2.3.0</BackgroundWorkerLibraryVersion>
     <BarcodenugetVersion>1.2.0</BarcodenugetVersion>
     <BarcodeVersion>1.2.0</BarcodeVersion>
+    <BouncyCastleVersion>2.6.0</BouncyCastleVersion>
     <BrutalDevStrongNameSignerVersion>3.2.1</BrutalDevStrongNameSignerVersion>
+    <BuildAllPackagesVersion>2.1.0</BuildAllPackagesVersion>
     <CefSharpLibraryVersion>2.4.0</CefSharpLibraryVersion>
     <CertificateLibrarynugetVersion>1.0.0</CertificateLibrarynugetVersion>
     <CertificateLibraryVersion>1.0.0</CertificateLibraryVersion>
+    <CodeDomExtnugetVersion>2.2.0</CodeDomExtnugetVersion>
     <CodeDomExtVersion>2.2.0</CodeDomExtVersion>
     <CodeDomModifierVersion>1.0.0</CodeDomModifierVersion>
+    <CodiceFiscalenugetVersion>1.1.0</CodiceFiscalenugetVersion>
     <CodiceFiscaleVersion>1.1.0</CodiceFiscaleVersion>
     <CommandBindingLibrarynugetVersion>1.3.0</CommandBindingLibrarynugetVersion>
     <CommandBindingLibraryVersion>1.3.0</CommandBindingLibraryVersion>
+    <CompileLibrarynugetVersion>1.0.0</CompileLibrarynugetVersion>
     <CompileLibraryVersion>1.0.0</CompileLibraryVersion>
+    <CompressExistingPDFnugetVersion>2.0.0</CompressExistingPDFnugetVersion>
     <CompressExistingPDFVersion>2.0.0</CompressExistingPDFVersion>
+    <ConfigurationLibrarynugetVersion>1.6.0</ConfigurationLibrarynugetVersion>
     <ConfigurationLibraryVersion>1.6.0</ConfigurationLibraryVersion>
     <ConsoleApp1Version>2.0.12</ConsoleApp1Version>
+    <CoreLibrarynugetVersion>2.5.0</CoreLibrarynugetVersion>
     <CoreLibrarySerilog1514LoggerVersion>1.5.14</CoreLibrarySerilog1514LoggerVersion>
     <CoreLibrarySerilog2100LoggerVersion>2.10.0</CoreLibrarySerilog2100LoggerVersion>
     <CoreLibrarySerilog250LoggerVersion>2.5.0</CoreLibrarySerilog250LoggerVersion>
     <CoreLibrarySerilog260LoggerVersion>2.6.0</CoreLibrarySerilog260LoggerVersion>
+    <CoreLibrarySerilogLoggernugetVersion>2.4.0</CoreLibrarySerilogLoggernugetVersion>
     <CoreLibrarySerilogLoggerVersion>2.4.0</CoreLibrarySerilogLoggerVersion>
     <CoreLibraryVersion>2.5.0</CoreLibraryVersion>
     <CreateHiddenProcessnugetVersion>1.2.0</CreateHiddenProcessnugetVersion>
     <CreateHiddenProcessVersion>1.2.0</CreateHiddenProcessVersion>
     <CSharpParserVersion>1.0.0</CSharpParserVersion>
+    <DapperLibrariesnugetVersion>1.4.0</DapperLibrariesnugetVersion>
     <DapperLibrariesVersion>1.4.0</DapperLibrariesVersion>
     <DapperLibraryVersion>1.4.0</DapperLibraryVersion>
+    <DataAccessLibrarynugetVersion>2.3.0</DataAccessLibrarynugetVersion>
     <DataAccessLibraryVersion>2.3.0</DataAccessLibraryVersion>
+    <DatabaseEditorLibrarynugetVersion>1.26.0</DatabaseEditorLibrarynugetVersion>
     <DatabaseEditorLibraryVersion>1.26.0</DatabaseEditorLibraryVersion>
+    <DatabaseSchemaLibrarynugetVersion>1.26.0</DatabaseSchemaLibrarynugetVersion>
     <DatabaseSchemaLibraryVersion>1.26.0</DatabaseSchemaLibraryVersion>
     <DataGridLibnugetVersion>1.2.0</DataGridLibnugetVersion>
+    <DataGridLibrarynugetVersion>1.52.0</DataGridLibrarynugetVersion>
     <DataGridLibraryVersion>1.52.0</DataGridLibraryVersion>
     <DataGridLibVersion>1.2.0</DataGridLibVersion>
+    <DataHandlerLibrarynugetnugetVersion>1.0.0</DataHandlerLibrarynugetnugetVersion>
+    <DataHandlerLibrarynugetVersion>1.0.0</DataHandlerLibrarynugetVersion>
     <DataHandlerLibraryVersion>1.0.0</DataHandlerLibraryVersion>
+    <DnsServernugetVersion>1.1.0</DnsServernugetVersion>
     <DnsServerVersion>1.1.0</DnsServerVersion>
     <DocumentoUnicoLibrariesVersion>2.1.0</DocumentoUnicoLibrariesVersion>
     <DocumentoUnicoVersion>2.2.1</DocumentoUnicoVersion>
@@ -61,10 +80,12 @@
     <EasyTabsVersion>1.2.0</EasyTabsVersion>
     <EFProviderWrappersnugetVersion>1.9.0</EFProviderWrappersnugetVersion>
     <EFProviderWrappersVersion>1.9.0</EFProviderWrappersVersion>
+    <EmailLibrarynugetVersion>1.3.0</EmailLibrarynugetVersion>
     <EmailLibraryVersion>1.3.0</EmailLibraryVersion>
     <EntityFramework6Version>6.4.4</EntityFramework6Version>
     <EntityFrameworkLibVersion>1.2.0</EntityFrameworkLibVersion>
     <EntityFrameworkVersion>6.4.4</EntityFrameworkVersion>
+    <ExcelLibrarynugetVersion>1.18.0</ExcelLibrarynugetVersion>
     <ExcelLibraryVersion>1.18.0</ExcelLibraryVersion>
     <FatturaElettronicaVersion>3.2.1</FatturaElettronicaVersion>
     <FluentAssertionsVersion>6.12.2</FluentAssertionsVersion>
@@ -80,8 +101,11 @@
     <HostAppInPanelnugetVersion>1.2.0</HostAppInPanelnugetVersion>
     <HostAppInPanelVersion>1.2.0</HostAppInPanelVersion>
     <HostProcessLibrary>1.0.0</HostProcessLibrary>
+    <HostProcessLibrarynugetVersion>1.0.0</HostProcessLibrarynugetVersion>
     <HostProcessLibraryVersion>1.0.0</HostProcessLibraryVersion>
+    <Html2XhtmlnugetVersion>1.2.0</Html2XhtmlnugetVersion>
     <Html2XhtmlVersion>1.2.0</Html2XhtmlVersion>
+    <HtmlCleanernugetVersion>1.4.0</HtmlCleanernugetVersion>
     <HtmlCleanerVersion>1.4.0</HtmlCleanerVersion>
     <IdentityApplicationnugetVersion>2.2.0</IdentityApplicationnugetVersion>
     <IdentityApplicationVersion>2.2.0</IdentityApplicationVersion>
@@ -95,19 +119,26 @@
     <ImmatricolazioniWsLibrariesVersion>1.1.0</ImmatricolazioniWsLibrariesVersion>
     <InjectModuleInitializernugetVersion>1.3.0</InjectModuleInitializernugetVersion>
     <InjectModuleInitializerVersion>1.3.0</InjectModuleInitializerVersion>
+    <InputBoxLibrarynugetVersion>2.0.0</InputBoxLibrarynugetVersion>
     <InputBoxLibraryVersion>2.0.0</InputBoxLibraryVersion>
     <InputSimulatornugetVersion>2.2.0</InputSimulatornugetVersion>
     <InputSimulatorVersion>2.2.0</InputSimulatorVersion>
+    <InstallerLibrarynugetVersion>1.8.0</InstallerLibrarynugetVersion>
     <InstallerLibraryVersion>1.8.0</InstallerLibraryVersion>
+    <IoCLibrarynugetVersion>1.8.0</IoCLibrarynugetVersion>
     <IoCLibraryVersion>1.8.0</IoCLibraryVersion>
+    <iTextCorenugetVersion>1.3.0</iTextCorenugetVersion>
     <iTextCoreVersion>1.3.0</iTextCoreVersion>
-    <iTextSharpPdfaVersion>6.0.0</iTextSharpPdfaVersion>
+    <iTextSharpPdfaVersion>6.1.0</iTextSharpPdfaVersion>
+    <itextsharpVersion>5.5.13</itextsharpVersion>
     <KillChromeDrivernugetVersion>2.2.0</KillChromeDrivernugetVersion>
     <KillChromeDriverVersion>2.2.0</KillChromeDriverVersion>
     <LastNetVersion>8.0.11</LastNetVersion>
     <LibEntityFrameworknugetVersion>1.5.0</LibEntityFrameworknugetVersion>
     <LibEntityFrameworkVersion>1.5.0</LibEntityFrameworkVersion>
+    <MdiInActiveXnugetVersion>2.5.0</MdiInActiveXnugetVersion>
     <MdiInActiveXVersion>2.5.0</MdiInActiveXVersion>
+    <MergeTablesnugetVersion>1.3.0</MergeTablesnugetVersion>
     <MergeTablesVersion>1.3.0</MergeTablesVersion>
     <MetroFrameworknugetVersion>1.4.0</MetroFrameworknugetVersion>
     <MetroFrameworkVersion>1.4.0</MetroFrameworkVersion>
@@ -117,6 +148,7 @@
     <MicrosoftNetTestSdkVersion>17.12.0</MicrosoftNetTestSdkVersion>
     <MicrosoftSourceLinkGitHubVersion>8.0.0</MicrosoftSourceLinkGitHubVersion>
     <MicrosoftSqlServerTypesVersion>4.0.0</MicrosoftSqlServerTypesVersion>
+    <MockAdoNetnugetVersion>1.1.0</MockAdoNetnugetVersion>
     <MockAdoNetVersion>1.1.0</MockAdoNetVersion>
     <MSBuildCommunityTasksnugetVersion>1.6.0</MSBuildCommunityTasksnugetVersion>
     <MSBuildCommunityTasksVersion>1.6.0</MSBuildCommunityTasksVersion>
@@ -136,6 +168,7 @@
     <Net4xAsyncBridgeVersion>1.5.0</Net4xAsyncBridgeVersion>
     <Net4xBaseTypesnugetVersion>1.3.0</Net4xBaseTypesnugetVersion>
     <Net4xBaseTypesVersion>1.3.0</Net4xBaseTypesVersion>
+    <Net4xBuffersnugetVersion>1.2.0</Net4xBuffersnugetVersion>
     <Net4xBuffersVersion>1.2.0</Net4xBuffersVersion>
     <Net4xConfigurationnugetVersion>1.1.0</Net4xConfigurationnugetVersion>
     <Net4xConfigurationVersion>1.1.0</Net4xConfigurationVersion>
@@ -144,18 +177,23 @@
     <Net4xDrawingVersion>4.8.9037</Net4xDrawingVersion>
     <Net4xEntityFrameworkLibVersion>1.2.0</Net4xEntityFrameworkLibVersion>
     <Net4xEntityFrameworkVersion>6.4.4</Net4xEntityFrameworkVersion>
+    <Net4xExtensionsnugetVersion>2.5.0</Net4xExtensionsnugetVersion>
     <Net4xExtensionsVersion>2.5.0</Net4xExtensionsVersion>
     <Net4xInternetExplorernugetVersion>1.5.0</Net4xInternetExplorernugetVersion>
+    <Net4xIOCompressionnugetVersion>1.0.0</Net4xIOCompressionnugetVersion>
     <Net4xIoCompressionVersion>1.0.0</Net4xIoCompressionVersion>
     <Net4xIOCompressionVersion>1.0.0</Net4xIOCompressionVersion>
     <Net4xiTextSharpnugetVersion>5.5.14</Net4xiTextSharpnugetVersion>
-    <Net4xiTextSharpVersion>5.5.14</Net4xiTextSharpVersion>
+    <Net4xiTextSharpPdfToPdfAVersion>6.0.1</Net4xiTextSharpPdfToPdfAVersion>
+    <Net4xiTextSharpVersion>6.1.0</Net4xiTextSharpVersion>
     <Net4xiTextVersion>1.1.0</Net4xiTextVersion>
     <Net4xMSHTMLnugetVersion>1.2.0</Net4xMSHTMLnugetVersion>
     <Net4xMSHTMLVersion>1.2.0</Net4xMSHTMLVersion>
+    <Net4xMsTestsnugetVersion>1.5.0</Net4xMsTestsnugetVersion>
     <Net4xMsTestsVersion>1.5.0</Net4xMsTestsVersion>
     <Net4XRuntimeCachingnugetVersion>1.3.0</Net4XRuntimeCachingnugetVersion>
     <Net4XRuntimeCachingVersion>1.3.0</Net4XRuntimeCachingVersion>
+    <Net4xRuntimeCompilerServicesUnsafenugetVersion>1.3.0</Net4xRuntimeCompilerServicesUnsafenugetVersion>
     <Net4xRuntimeCompilerServicesUnsafeVersion>1.3.0</Net4xRuntimeCompilerServicesUnsafeVersion>
     <Net4xSqlServerTypesnugetVersion>4.0.0</Net4xSqlServerTypesnugetVersion>
     <Net4xSqlServerTypesVersion>4.0.0</Net4xSqlServerTypesVersion>
@@ -163,14 +201,18 @@
     <Net4xValueTupleVersion>1.4.0</Net4xValueTupleVersion>
     <Net4xWebVersion>4.8.9037</Net4xWebVersion>
     <Net4xWrapperGeneratorVersion>1.2.0</Net4xWrapperGeneratorVersion>
+    <Net4xWshRuntimenugetVersion>1.0.0</Net4xWshRuntimenugetVersion>
     <Net4xWshRuntimeVersion>1.0.0</Net4xWshRuntimeVersion>
     <NetClientProgramVersion>1.0.0</NetClientProgramVersion>
     <NewtonsoftJsonVersion>13.0.3</NewtonsoftJsonVersion>
+    <NotepadSharpnugetVersion>1.5.0</NotepadSharpnugetVersion>
     <NotepadSharpVersion>1.5.0</NotepadSharpVersion>
     <NotifyIconWpfnugetVersion>2.3.0</NotifyIconWpfnugetVersion>
     <NotifyIconWpfVersion>2.3.0</NotifyIconWpfVersion>
+    <NugetOptimizerVersion>1.0.0</NugetOptimizerVersion>
     <NuGetUtilityPocVersion>2.0.12</NuGetUtilityPocVersion>
-    <NuGetUtilityVersion>2.1.0</NuGetUtilityVersion>
+    <NuGetUtilityVersion>1.0.0</NuGetUtilityVersion>
+    <NumberConverterLibnugetVersion>1.2.0</NumberConverterLibnugetVersion>
     <NumberConverterLibVersion>1.2.0</NumberConverterLibVersion>
     <ObfuscarVersion>2.2.37</ObfuscarVersion>
     <OcrLibrarynugetVersion>1.3.0</OcrLibrarynugetVersion>
@@ -193,36 +235,53 @@
     <PdfLibNetx86NetCoreVersion>2.1.0</PdfLibNetx86NetCoreVersion>
     <PdfLibNetx86nugetVersion>2.1.0</PdfLibNetx86nugetVersion>
     <PdfLibNetx86Version>2.1.0</PdfLibNetx86Version>
+    <PdfOcrnugetVersion>1.3.0</PdfOcrnugetVersion>
     <PdfOcrVersion>1.3.0</PdfOcrVersion>
+    <PdfRecognizerLibrarynugetVersion>1.3.0</PdfRecognizerLibrarynugetVersion>
     <PdfRecognizerLibraryVersion>1.3.0</PdfRecognizerLibraryVersion>
+    <PdfRepresentationnugetVersion>1.3.0</PdfRepresentationnugetVersion>
     <PdfRepresentationVersion>1.3.0</PdfRepresentationVersion>
-    <PdfToPdfALibraryVersion>1.81.0</PdfToPdfALibraryVersion>
-    <PdfToPdfAVersion>1.81.0</PdfToPdfAVersion>
+    <PdfToPdfALibraryVersion>1.90.0</PdfToPdfALibraryVersion>
+    <PdfToPdfAnugetVersion>1.90.0</PdfToPdfAnugetVersion>
+    <PdfToPdfAVersion>1.90.0</PdfToPdfAVersion>
+    <PdfViewerLibrarynugetnugetVersion>2.2.0</PdfViewerLibrarynugetnugetVersion>
     <PdfViewerLibrarynugetVersion>2.2.0</PdfViewerLibrarynugetVersion>
     <PdfViewerLibraryVersion>2.2.0</PdfViewerLibraryVersion>
+    <PinnedLibrarynugetVersion>1.3.0</PinnedLibrarynugetVersion>
     <PinnedLibraryVersion>1.3.0</PinnedLibraryVersion>
+    <ProjectsFormatLibrarynugetVersion>1.9.0</ProjectsFormatLibrarynugetVersion>
     <ProjectsFormatLibraryVersion>1.9.0</ProjectsFormatLibraryVersion>
+    <QuestionsLibrarynugetVersion>1.42.0</QuestionsLibrarynugetVersion>
     <QuestionsLibraryVersion>1.42.0</QuestionsLibraryVersion>
     <SchedulerLibraryVersion>1.1.0</SchedulerLibraryVersion>
+    <SeleniumLibrarynugetVersion>1.3.0</SeleniumLibrarynugetVersion>
     <SeleniumLibraryVersion>1.3.0</SeleniumLibraryVersion>
     <SensorsnugetVersion>1.2.0</SensorsnugetVersion>
     <serilog-sinks-fileVersion>5.0.1</serilog-sinks-fileVersion>
     <SerilogAspNetCoreVersion>8.0.3</SerilogAspNetCoreVersion>
+    <serilogextensionsloggingnugetVersion>3.2.0</serilogextensionsloggingnugetVersion>
     <serilogextensionsloggingVersion>3.2.0</serilogextensionsloggingVersion>
     <SerilogExtensionsLoggingVersion>3.2.0</SerilogExtensionsLoggingVersion>
+    <SerilognugetVersion>2.13.0</SerilognugetVersion>
+    <serilogsinksconsoleallnugetVersion>4.2.0</serilogsinksconsoleallnugetVersion>
     <serilogsinksconsoleallVersion>4.2.0</serilogsinksconsoleallVersion>
+    <serilogsinksconsolenugetVersion>4.2.0</serilogsinksconsolenugetVersion>
     <serilogsinksconsoleVersion>4.2.0</serilogsinksconsoleVersion>
+    <serilogsinksfilenugetVersion>5.1.0</serilogsinksfilenugetVersion>
     <serilogsinksfileVersion>5.1.0</serilogsinksfileVersion>
     <SerilogSinksFileVersion>5.1.0</SerilogSinksFileVersion>
     <SerilogSyncConsoleVersion>4.2.0</SerilogSyncConsoleVersion>
     <SerilogVersion>2.13.0</SerilogVersion>
+    <ServiceLibrarynugetVersion>1.62.0</ServiceLibrarynugetVersion>
     <ServiceLibraryVersion>1.62.0</ServiceLibraryVersion>
     <SetupCustomActionVersion>1.1.0</SetupCustomActionVersion>
+    <SgmlLibrarynugetVersion>1.0.0</SgmlLibrarynugetVersion>
     <SgmlLibraryVersion>1.0.0</SgmlLibraryVersion>
     <SqlParametersToVariableDefinitionsnugetVersion>1.0.0</SqlParametersToVariableDefinitionsnugetVersion>
     <SqlParametersToVariableDefinitionsVersion>1.0.0</SqlParametersToVariableDefinitionsVersion>
     <StarbCommonVersion>2.0.0</StarbCommonVersion>
     <StarbNet8Version>30.0.0</StarbNet8Version>
+    <StarbookAppVersion>1.0.0</StarbookAppVersion>
     <StarbVersion>30.0.0</StarbVersion>
     <SystemCodeDom5Version>5.0.0</SystemCodeDom5Version>
     <SystemCodeDom6Version>6.0.0</SystemCodeDom6Version>
@@ -242,8 +301,12 @@
     <SystemSecurityPermissions9Version>9.0.0</SystemSecurityPermissions9Version>
     <SystemSecurityPermissionsVersion>7.0.0</SystemSecurityPermissionsVersion>
     <SystemSecurityPrincipalWindowsVersion>5.0.0</SystemSecurityPrincipalWindowsVersion>
+    <SystemTextEncodingVersion>4.3.0</SystemTextEncodingVersion>
+    <TaskSchedulerLibrarynugetVersion>1.3.0</TaskSchedulerLibrarynugetVersion>
     <TaskSchedulerLibraryVersion>1.3.0</TaskSchedulerLibraryVersion>
+    <TextControlnugetVersion>1.2.0</TextControlnugetVersion>
     <TextControlVersion>1.2.0</TextControlVersion>
+    <TitaniumProxyLibrarynugetVersion>1.72.0</TitaniumProxyLibrarynugetVersion>
     <TitaniumProxyLibraryVersion>1.72.0</TitaniumProxyLibraryVersion>
     <TitaniumWebProxyDocsVersion>2.1.0</TitaniumWebProxyDocsVersion>
     <TitaniumWebProxyNet40Version>2.1.0</TitaniumWebProxyNet40Version>
@@ -254,34 +317,44 @@
     <TouchLibrarynugetVersion>1.2.0</TouchLibrarynugetVersion>
     <TouchLibraryVersion>1.2.0</TouchLibraryVersion>
     <UnitTestLibrary>1.2.0</UnitTestLibrary>
+    <UnitTestLibrarynugetVersion>1.3.0</UnitTestLibrarynugetVersion>
     <UnitTestLibraryVersion>1.3.0</UnitTestLibraryVersion>
+    <UpdateLibrarynugetVersion>1.32.0</UpdateLibrarynugetVersion>
     <UpdateLibraryPocnet8windowsVersion>1.30.0</UpdateLibraryPocnet8windowsVersion>
     <UpdateLibraryPoCnet8windowsVersion>1.30.0</UpdateLibraryPoCnet8windowsVersion>
     <UpdateLibraryPocVersion>1.30.0</UpdateLibraryPocVersion>
     <UpdateLibraryPoCVersion>1.30.0</UpdateLibraryPoCVersion>
     <UpdateLibraryVersion>1.32.0</UpdateLibraryVersion>
+    <UploadPackagesnugetVersion>1.2.0</UploadPackagesnugetVersion>
     <UploadPackagesVersion>1.2.0</UploadPackagesVersion>
+    <UtilityLibrarynugetVersion>1.5.0</UtilityLibrarynugetVersion>
     <UtilityLibraryVersion>1.5.0</UtilityLibraryVersion>
     <ValuesFromSelectVersion>2.2.0</ValuesFromSelectVersion>
     <VbHelpersVersion>1.2.0</VbHelpersVersion>
     <ViewCodeDomnugetVersion>1.0.0</ViewCodeDomnugetVersion>
     <ViewCodeDomVersion>1.0.0</ViewCodeDomVersion>
+    <VisualBasicLibrarynugetVersion>1.2.0</VisualBasicLibrarynugetVersion>
     <VisualBasicLibraryVersion>1.2.0</VisualBasicLibraryVersion>
     <WebBrowserLibraryInterfacesVersion>1.5.0</WebBrowserLibraryInterfacesVersion>
+    <WebBrowserLibrarynugetVersion>1.5.0</WebBrowserLibrarynugetVersion>
     <WebBrowserLibraryVersion>1.5.0</WebBrowserLibraryVersion>
     <WhenTheVersionnugetVersion>1.2.0</WhenTheVersionnugetVersion>
     <WhenTheVersionVersion>1.2.0</WhenTheVersionVersion>
+    <WiaScannerLibrarynugetVersion>1.26.0</WiaScannerLibrarynugetVersion>
     <WiaScannerLibraryVersion>1.26.0</WiaScannerLibraryVersion>
     <Win32InteropnugetVersion>1.1.0</Win32InteropnugetVersion>
     <Win32InteropVersion>1.1.0</Win32InteropVersion>
     <WindowsAPICodePacknugetVersion>1.2.0</WindowsAPICodePacknugetVersion>
     <WindowsAPICodePackVersion>1.2.0</WindowsAPICodePackVersion>
     <WindowsFormsApp1Version>1.0.0</WindowsFormsApp1Version>
+    <WindowsLibrarynugetVersion>1.1.0</WindowsLibrarynugetVersion>
     <WindowsLibraryVersion>1.1.0</WindowsLibraryVersion>
     <WpfAdornedControlnugetVersion>1.2.0</WpfAdornedControlnugetVersion>
     <WpfAdornedControlVersion>1.2.0</WpfAdornedControlVersion>
+    <WrapperGeneratornugetVersion>1.2.0</WrapperGeneratornugetVersion>
     <WrapperGeneratorVersion>1.2.0</WrapperGeneratorVersion>
     <Xsd2DbLibraryVersion>1.1.0</Xsd2DbLibraryVersion>
+    <Xsd2DbnugetVersion>1.4.0</Xsd2DbnugetVersion>
     <Xsd2DbVersion>1.4.0</Xsd2DbVersion>
     <XunitRunnerVisualStudioVersion>2.8.2</XunitRunnerVisualStudioVersion>
     <XunitVersion>2.9.2</XunitVersion>
